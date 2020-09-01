@@ -1,0 +1,208 @@
+﻿Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@gopichand4b1 
+virtual-labs
+/
+computer-programming-responsive-iiith
+15
+1277
+Code
+Issues
+295
+Pull requests
+167
+Actions
+Projects
+Wiki
+Security
+Insights
+You’re making changes in a project you don’t have write access to. Submitting a change will write it to a new branch in your fork gopichand4b1/computer-programming-responsive-iiith, so you can send a pull request.
+computer-programming-responsive-iiith
+/
+src
+/
+lab
+/
+exp6
+/
+simulation
+/
+SwitchCase
+/
+basicControlFlow.js
+ 
+
+Tabs
+
+8
+
+No wrap
+67
+        removeColorClass: function (id, colorClass) {
+68
+                document.getElementById(id).classList.remove(colorClass);
+69
+        },
+70
+        // getNextSiblingElement: return next sibling element.
+71
+        getNextSiblingElement: function (element) {
+72
+                var nextSiblingElement = element.nextSibling;
+73
+                nextSiblingElement = nextSiblingElement.nextSibling;
+74
+                return nextSiblingElement;
+75
+        },
+76
+        // getElementByClass: return element by given class name.
+77
+        getElementByClass: function (className) {
+78
+                var element = document.getElementsByClassName(className);
+79
+                return element[0];
+80
+        },
+81
+        // codeExecutionWithColour: shows execution of code by changing color in code Content.
+82
+        codeExecutionWithColour: function () {
+83
+                this.removeColorClass(this.currentSiblingElement.id, 'redClass');
+84
+                this.applyColorClass(this.nextSiblingElement.id, 'redClass');
+85
+        },
+86
+        // codeExecutionWithColourAndId: shows execution of code by changing color with given id in code Content.
+87
+        codeExecutionWithColourAndId: function (id) {
+88
+                this.removeColorClass(this.currentSiblingElement.id, 'redClass');
+89
+                this.applyColorClass(id, 'redClass');
+90
+        },
+91
+        // changeOpacity: changes opacity of image.
+92
+        changeOpacity: function (id) {
+93
+                document.getElementById(id).style.opacity = '1';
+94
+        },
+95
+        // showDay: shows desire day that by showing output string and change opacity of day picture.
+96
+        showDay: function (id, previousChildId, imagesId, innerHTMLId, innerHTML) {
+97
+                this.codeExecutionWithColourAndId(id);
+98
+                this.setInnerHtml(innerHTMLId, innerHTML);
+99
+                this.changeOpacity(imagesId);   
+100
+        },
+101
+        // jumpToDay: to jump on desire day.
+102
+        jumpToDay: function () {
+103
+                switch (model.inputNumber) {
+104
+                        case 1:
+105
+                                this.showDay('case1Id', this.currentSiblingElement.id, 'mondayImages', 'strNullId', 'Monday');
+106
+                                break;
+107
+                        case 2:
+108
+                                this.showDay('case2Id', this.currentSiblingElement.id, 'tuesdayImages', 'strNullId', 'Tuesday');
+109
+                                break;
+110
+                        case 3:
+111
+                                this.showDay('case3Id', this.currentSiblingElement.id, 'wednesdayImages', 'strNullId', 'Wednesday');
+112
+                                break;
+113
+                        case 4:
+114
+                                this.showDay('case4Id', this.currentSiblingElement.id, 'thursdayImages', 'strNullId', 'Thursday');
+115
+                                break;
+116
+                        case 5:
+117
+                                this.showDay('case5Id', this.currentSiblingElement.id, 'fridayImages', 'strNullId', 'Friday');
+118
+                                break;
+119
+                        case 6:
+120
+                                this.showDay('case6Id', this.currentSiblingElement.id, 'saturdayImages', 'strNullId', 'HOLIDAY');
+121
+                                break;
+122
+                        case 7:
+123
+                                this.showDay('case7Id', this.currentSiblingElement.id, 'sundayImages', 'strNullId', 'Sunday');
+124
+                                break;
+125
+                        default:
+126
+                                this.showDay('defaultId', this.currentSiblingElement.id, null, 'strNullId', 'null');
+127
+                        break;  
+128
+                }
+129
+        },
+130
+        /* validationInput: check validation of input that is given by user if input value is valid
+131
+        then make submit button disable and make start button enable. */
+132
+        validationInput: function () {
+133
+                var textFieldValue = this.getValue('textFieldId');
+134
+                if (textFieldValue === '' || isNaN(textFieldValue)) {
+135
+                        alert('Enter Numeric Values Only');
+136
+                        return false;
+137
+                } 
+138
+                else {
+@gopichand4b1
+Propose changes
+Commit summary
+Update basicControlFlow.js
+Optional extended description
+Add an optional extended description…
+ 
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
